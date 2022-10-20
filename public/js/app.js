@@ -17512,6 +17512,7 @@ __webpack_require__.r(__webpack_exports__);
         vm.response(result['message']);
         if (result['is_store'] != null) {
           vm.reset();
+          vm.updateUserdata();
         }
       });
       console.log("form reset complete.");
@@ -17545,9 +17546,10 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   updated: function updated() {
-    this.updateUserdata();
+    console.log("updated");
   },
-  mounted: function mounted() {
+  created: function created() {
+    console.log("created");
     this.updateUserdata();
   }
 });

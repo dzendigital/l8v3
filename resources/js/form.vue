@@ -78,6 +78,7 @@
             vm.response(result['message']);
             if ( result['is_store'] != null ) { 
               vm.reset();
+              vm.updateUserdata();
             }
         });
         console.log("form reset complete.")
@@ -115,9 +116,10 @@
       }
     },
     updated() {
-        this.updateUserdata();
+      console.log("updated")
     },
-    mounted() {
+    created() {
+      console.log("created")
         this.updateUserdata();
     }
   }
